@@ -1,5 +1,5 @@
 async function foo() {
-  return await 2;
+  return await 1;
 }
 
 foo().then(function(val) {

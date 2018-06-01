@@ -1,10 +1,10 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: './index.js',
+  entry: "./index.js",
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Myboilerplate'
+      title: "Myboilerplate"
     })
   ],
   module: {
@@ -13,7 +13,7 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
             cacheDirectory: true
           }

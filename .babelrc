@@ -3,8 +3,18 @@
     [
       "env",
       {
-        "targets": { "browsers": ["last 2 versions"] },
+        "targets": {
+          "browsers": ["last 2 versions"]
+        },
         "debug": false
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "transform-runtime", {
+        "polyfill": false,
+        "regenerator": true
       }
     ]
   ],
