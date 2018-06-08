@@ -21,6 +21,7 @@ module.exports = merge(common, {
   ],
   output: {
     filename: 'index.[chunkhash].js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
   }
 });
