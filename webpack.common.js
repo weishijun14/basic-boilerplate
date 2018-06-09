@@ -18,6 +18,10 @@ module.exports = {
             cacheDirectory: true
           }
         }
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
       }
     ]
   }
