@@ -1,3 +1,5 @@
+import styles from "./index.css";
+
 async function foo() {
   return await 1;
 }

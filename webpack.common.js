@@ -1,10 +1,13 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+const devMode = process.env.NODE_ENV !== "production";
 
 module.exports = {
-  entry: './index.js',
+  entry: "./index.js",
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html'
+      template: "./index.html"
     })
   ],
   module: {
@@ -13,7 +16,7 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
             cacheDirectory: true
           }
@@ -21,7 +24,10 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+        use: [
+          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+          "css-loader"
+        ]
       }
     ]
   }
