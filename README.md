@@ -5,3 +5,4 @@ webpack + babel, made basic structure for develop ES6 (or Vanilla) plugins / uti
 2. support `last 2 version` browsers.
 3. support **ES6** , even `async/await`.
 4. support .js,.css add hash.
+5. use yarn
